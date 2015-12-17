@@ -1,0 +1,86 @@
+ 
+2010:
+HD01_S001: Total Population
+HD01_S107: Hispanic
+HD01_S123- Total population - Not Hispanic or Latino - White alone
+
+2000
+HC01_VC01,Number; Total population
+HC01_VC56,Number; HISPANIC OR LATINO AND RACE - Total population 
+HC01_VC62,Number; HISPANIC OR LATINO AND RACE - Total population - Not Hispanic or Latino - White alone
+
+BUSHWICK:
+
+Hispanic:
+73616 / 112634 65%
+70142 / 104358 67% 
+
+White:
+9564 / 112634 8.5%
+3026 / 104358 3%
+
+HD01_S169,Number; HOUSING OCCUPANCY - Total housing units
+HD02_S169,Percent; HOUSING OCCUPANCY - Total housing units
+
+HC01_VC93,Number; HOUSING OCCUPANCY - Total housing units
+HC02_VC93,Percent; HOUSING OCCUPANCY - Total housing units
+
+Bushwick:
+
+2000:
+34455 Total housing Units
+31598 Occupied
+2857 Vacant
+
+2010:
+40549 Total Housing Units
+37014 Occupied Housing Units
+3535 Vacant
+
+
+A few weeks ago, one XXXX posted an article on the Bushwick Daily which used census data to support pro-gentrification, white supremacist viewpoints. The article attempted to use "data" to suggest that gentrification in Bushwick wasn't happening. It is retrogressive predilection, riddled with errors, being disguised as journalism: want to give your false and dangerous ideology some creditably (and maybe get it published too)? Just whip up some quick charts in excel and hope that one one notices...
+
+Undoubtedly, numbers and maps have power. This is in part why I helped start the Bushwick Community Map -- to give anti-gentrification and housing advocates the same numerical & technical tools that real estate has.
+
+Following this post, Anthony wrote a fabulous response that I encourage you to read. However, I imagine that some readers out there might have a lagging thought in back of your head: _but what about those numbers?_ 
+
+This is first in a series of blog posts that will examine the trends the census actually shows in Bushwick and North Brooklyn.
+
+## In 10 years, Bushwick gained 7500 White new white residents and 6000 new housing units.
+
+It's obvious to anyone who'se spent more than 10 minutes in Bushwick over the past 5 years of the changes that's occurred. Part of me doesn't want to spend the effort to prove that 'gentrification exists' through data when one  could just walk down the street and talk to nearly anyone. Still, there are useful patterns that can be drawn from the census, when done in a careful and honest way. 
+
+One critical problem with the Bushwick Daily article is it's reliance outdated data. It's true that it will be hard to track some aspects of neighborhood change due to the temporal nature  of the census. Nonetheless, certain demographics changes from 2000 to 2010 clearly show nascent gentrification trends that are widespread today.
+
+* The white population triples. In 2000 only 3% of Bushwick is White. By 2010, Bushwick  has grown to 8.5% white.
+
+These changes occurs largely in the north part of Bushwick, as if spilling over from Williamsburg.
+
+XXX analysis rest of showing that some ethnic groups don't loose population numbers. This, in some regards, is 'technically true', but doesn't account for population growth.  Let's compare Bushwick to NYC as a whole. 
+
+It's true that the Hispanic population grew slightly from around 70,000 to around 73,500 - an increase of about 5% -- but that's way under what one might expect. In New York City the Hispanic/Latino population grew from 2.2 Million to 2.8 Million between 2000 and 2010, an increase of nearly 30%. Bushwick, instead of following that trend, showed only an increase of 5%. Why? The growing gentrification and raising rents of bushwick has prevented the growth of the Hispanic/Latino population. The housing that should have been rented to people of color have instead been taken over by Whites.
+
+NYC's white population has declined, slightly from 2.8 Million in 2000 to 2.7 Million in 2010. Bushwick has defied that trend with an exploding tripling of the white population.
+
+So certainly, Bushwick needs affordable housing for the growing Hispanic/Latino population of New York, but why then does it seem that nearly all of new-building housing is going to Whites who didn't live in bushwick before? All signs point to a housing and planning system that promotes gentrification. 
+
+...More dispatches from the census coming soon!
+
+36005 BRONX
+36047 KINGS
+36061 NY COUNTY
+36085 RICHMOND
+36081
+
+All of NYC:
+
+2010:
+Total Pop: 8175133
+Hispanic: 2336076
+Not-Hispanic White: 2722904
+
+
+2000:
+total pop: 8008278
+Hispanic: 2160554
+Not-hispanic White: 2801267
