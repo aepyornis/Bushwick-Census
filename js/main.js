@@ -1,25 +1,38 @@
 d3.json('data/bushwick.json', function(err, bushwick){
   if (err) return console.error(err);
-
+  
   var bushwickCensus = topojson.feature(bushwick, bushwick.objects.bushwick_census);
+  var boroughs = topojson.feature(bushwick, bushwick.objects.boroughs);
+  var cd = topojson.feature(bushwick, bushwick.objects.cd);
+
   
   var w = 700;
   var h = 800;  
-  var svg = svgMaker(w,h);
+  var svg = svgMaker(w,h, '#white-pop-map');
 
   var path = d3.geo.path()
         .projection(projection(w,h));
-  
+
+  // borough background
+  svg.append('path')
+    .datum(boroughs)
+    .attr('d', path)
+    .attr('fill','#ccebc5')
+    .attr('fill-opacity', 0.8);
+
+  //bushwick census
   svg.append('path')
     .datum(bushwickCensus)
     .attr('d', path);
-  
-});
+    
+
+
+}); //end of d3.json   
 
 
 //returns svg object
-function svgMaker(width, height) {
-  return d3.select('body').append('svg')
+function svgMaker(width, height, element) {
+  return d3.select(element).append('svg')
     .attr('width', width)
     .attr('height', height);
 }
