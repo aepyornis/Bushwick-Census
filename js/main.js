@@ -1,5 +1,7 @@
-d3.json('data/bushwick.json', function(err, bushwick){
-  if (err) return console.error(err);
+'use strict';
+
+d3.json('data/bushwick.json', function (err, bushwick){
+  if (err) {return console.error(err);}
   // generated geojsons
   var bushwickCensus =  topojson.feature(bushwick, bushwick.objects.bushwick_census);
   var boroughs = topojson.feature(bushwick, bushwick.objects.boroughs);
@@ -31,8 +33,12 @@ d3.json('data/bushwick.json', function(err, bushwick){
         .attr('fill', function(d){
           return whitePopScale(d.properties['nhwpct' + currentYear]);
         });
-
-  parks(svg, path);
+  //parks
+  svg.append('path')
+    .datum(parks)
+    .attr('d', path)
+    .attr('fill', '#4ca64c')
+    .attr('fill-opacity', '0.9');
   
   var labels = svg.selectAll(".label")
         .data(bushwickCensus.features)
@@ -82,7 +88,6 @@ d3.json('data/bushwick.json', function(err, bushwick){
      labels.text(LabelText(currentYear));
      toggle.text(currentYear);
    });
-}); //end of d3.json   
 
   //returns svg object
 function svgMaker(width, height, element) {
@@ -141,7 +146,6 @@ function boroRoadsWaterGreenspace(svg, path) {
     .datum(water)
     .attr('d', path)
     .attr('fill', '#B2B2FF');
-
   // greenspace
   svg.append('path')
     .datum(greenspace)
@@ -150,14 +154,9 @@ function boroRoadsWaterGreenspace(svg, path) {
     .attr('fill-opacity', '0.6');
 }
 
-function parks(svg, path) {
-  svg.append('path')
-    .datum(parks)
-    .attr('d', path)
-    .attr('fill', '#4ca64c')
-    .attr('fill-opacity', '0.9');
-}
 // var b;
 // d3.json('data/bushwick.json', function(err, bushwick){
 //   b =  topojson.feature(bushwick, bushwick.objects.bushwick_census);
-//});
+  //});
+  
+}); //end of d3.json   
