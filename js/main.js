@@ -19,6 +19,8 @@ d3.json('data/bushwick.json', function(err, bushwick){
     .attr('fill','#ccebc5')
     .attr('fill-opacity', 0.8);
 
+  var currentYear = '2000';
+  
   //bushwick census
   var tracts = svg.selectAll('path.tracts')
         .data(bushwickCensus.features)
@@ -27,7 +29,7 @@ d3.json('data/bushwick.json', function(err, bushwick){
         .attr('d', path)
         .attr('stroke', 'white')
         .attr('fill', function(d){
-          return whitePopScale(d.properties.nhwpct2010);
+          return whitePopScale(d.properties['nhwpct' + currentYear]);
         });
 
   var labels = svg.selectAll(".label")
@@ -37,14 +39,37 @@ d3.json('data/bushwick.json', function(err, bushwick){
         .attr('class', 'label')
         .attr("transform", function(d) {
           return "translate(" + projection(w,h)(d3.geo.centroid(d.geometry)) + ")"; })
-        .text(LabelText('2010'))
+        .text(LabelText(currentYear))
         .attr('text-anchor', 'middle')
         .attr('dy', '1em');
   
-  var currentYear = '2010';
+  var title = svg.append('text')
+        .attr('class', 'title')
+        .attr('x', '10')
+        .attr('y', '30')
+        .text('Pct of "Non-Hispanic Whites" in each Bushwick census tract');
+
+  var toggleLocation = {
+    x: '' + (w * 0.8),
+    y: '' + (h * 0.15)
+  };
   
-  d3.select('#white-pop-year-toggle')
-    .on('click', function(){
+  var toggle = svg.append('text')
+        .attr('id', '#year-toggle')
+        .attr('class', 'toggle') 
+        .attr('x',toggleLocation.x)
+        .attr('y', toggleLocation.y)
+        .text(currentYear);
+              
+  var toggleInfo = svg.append('text')
+        .attr('class', 'toggle-info')
+        .attr('x',toggleLocation.x)
+        .attr('y', toggleLocation.y)
+        .attr('dy', '20')
+        .attr('dx', '-20')
+        .text('Click year to switch');
+
+   toggle.on('click', function(){
       currentYear = (currentYear === '2010') ? '2000' : '2010';
       tracts
         .transition()
@@ -52,6 +77,8 @@ d3.json('data/bushwick.json', function(err, bushwick){
         .attr('fill', function(d){
           return whitePopScale(d.properties['nhwpct' + currentYear]);
         });
+     labels.text(LabelText(currentYear));
+     toggle.text(currentYear);
     });
 
 }); //end of d3.json   
@@ -66,7 +93,7 @@ function svgMaker(width, height, element) {
 //returns d3 projection
 function projection(w,h){
   return d3.geo.mercator()
-    .center([-73.921422,40.696649])
+    .center([-73.920522,40.692649])
     .scale(700000)
     .translate([ w / 2, h / 2]);
 }

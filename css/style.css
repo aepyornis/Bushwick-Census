@@ -2,3 +2,17 @@
   font-size: .6em;
   fill: 'black';
 }
+
+.title {
+  font-size: 1.3em;
+  fill: 'black';
+}
+
+.toggle {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+#white-pop-map {
+  text-align: center;
+}
