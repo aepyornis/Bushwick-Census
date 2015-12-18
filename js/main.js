@@ -20,19 +20,33 @@ d3.json('data/bushwick.json', function(err, bushwick){
     .attr('fill-opacity', 0.8);
 
   //bushwick census
-  svg.selectAll('path')
+  var tracts = svg.selectAll('path.tracts')
     .data(bushwickCensus.features)
     .enter()
     .append('path')
     .attr('d', path)
     .attr('stroke', 'white')
     .attr('fill', function(d){
-      return 'blue';
+      return whitePopScale(d.properties.nhwpct2010);
+    });
+
+  var currentYear = '2010';
+  
+  d3.select('#white-pop-year-toggle')
+    .on('click', function(){
+      currentYear = (currentYear === '2010') ? '2000' : '2010';
+      tracts
+        .transition()
+        .duration(500)
+         .attr('fill', function(d){
+          return whitePopScale(d.properties['nhwpct' + currentYear]);
+        });
     });
 
 }); //end of d3.json   
 
-
+//nhwpct2000: 1
+//nhwpct2010
 //returns svg object
 function svgMaker(width, height, element) {
   return d3.select(element).append('svg')
@@ -46,4 +60,21 @@ function projection(w,h){
     .center([-73.921422,40.696649])
     .scale(500000)
     .translate([ w / 2, h / 2]);
+}
+
+function whitePopScale(pct) {
+  var blues = ['#eff3ff','#c6dbef','#9ecae1','#6baed6','#3182bd','#08519c'];
+  if (pct < 3 ){
+    return blues[0];
+  } else if (pct < 5) {
+    return blues[1];
+  } else if (pct < 7) {
+    return blues[2];
+  } else if (pct < 9) {
+    return blues[3];
+  } else if (pct < 11) {
+    return blues[4];
+  } else {
+    return blues[5];
+  }
 }
