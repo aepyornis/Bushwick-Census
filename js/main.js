@@ -30,7 +30,7 @@ d3.json('data/bushwick.json', function(err, bushwick){
           return whitePopScale(d.properties.nhwpct2010);
         });
 
-  var labels = svg.selectAll(".labels")
+  var labels = svg.selectAll(".label")
         .data(bushwickCensus.features)
         .enter()
         .append('text')
@@ -40,7 +40,8 @@ d3.json('data/bushwick.json', function(err, bushwick){
         .text(function(d){
           return '' + d.properties.nhwpct2010 + '%';
         })
-        .attr('fill', 'black');
+        .attr('text-anchor', 'middle')
+        .attr('dy', '1em');
   
   var currentYear = '2010';
   
@@ -68,7 +69,7 @@ function svgMaker(width, height, element) {
 function projection(w,h){
   return d3.geo.mercator()
     .center([-73.921422,40.696649])
-    .scale(500000)
+    .scale(700000)
     .translate([ w / 2, h / 2]);
 }
 
@@ -89,7 +90,7 @@ function projection(w,h){
   }
 }
 
-var b;
-d3.json('data/bushwick.json', function(err, bushwick){
-  b =  topojson.feature(bushwick, bushwick.objects.bushwick_census);
-});
+// var b;
+// d3.json('data/bushwick.json', function(err, bushwick){
+//   b =  topojson.feature(bushwick, bushwick.objects.bushwick_census);
+//});
