@@ -37,9 +37,7 @@ d3.json('data/bushwick.json', function(err, bushwick){
         .attr('class', 'label')
         .attr("transform", function(d) {
           return "translate(" + projection(w,h)(d3.geo.centroid(d.geometry)) + ")"; })
-        .text(function(d){
-          return '' + d.properties.nhwpct2010 + '%';
-        })
+        .text(LabelText('2010'))
         .attr('text-anchor', 'middle')
         .attr('dy', '1em');
   
@@ -88,6 +86,12 @@ function projection(w,h){
   } else {
     return blues[5];
   }
+ }
+
+function LabelText(year) {
+  return function(d){
+    return '' + d.properties['nhwpct' + year] + '%';
+  };
 }
 
 // var b;
