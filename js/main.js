@@ -12,7 +12,7 @@ d3.json('data/bushwick.json', function (err, bushwick){
   var water =  topojson.feature(bushwick, bushwick.objects.costal_water);
 
   var w = 700;
-  var h = 800;  
+  var h = 700;  
   var svg = svgMaker(w,h, '#white-pop-map');
 
   var path = d3.geo.path()

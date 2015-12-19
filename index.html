@@ -3,35 +3,41 @@
     <head>
         <meta charset="utf-8">
         <title>Bushwick and the U.S. Census</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
         <link href="css/style.css" rel="stylesheet"></link>
+        
         <script type="text/javascript" src="d3/d3.v3.js"></script>
         <script type="text/javascript" src="d3/topojson.v1.min.js"></script>
     </head>
     <body>
       <script type="text/javascript" src="js/main.js"></script>
-      <div id="wrapper">
-      <h1>Bushwick and the U.S. Census</h1>
-<p>A few weeks ago,  Evagelos Frigis posted an <a href="http://bushwickdaily.com/2015/10/are-white-bodies-gentrifying-bushwick/">article</a> on the Bushwick Daily which used census data to support pro-gentrification, white supremacist viewpoints, disguised as journalism. The article attempted to use "data" to suggest that gentrification in Bushwick isn't happening. The article was so offensive and riddled with errors the Bushwick Daily Editor had to <a href="http://bushwickdaily.com/2015/12/note-from-the-editor-apology-for-problematic-use-of-census-data-in-our-article/">post an apology</a>. What better way to give your false and dangerous opinions some creditably (and maybe get it published too) than whipping up some quick charts in excel and hope that one one notices...  </p>
+      <div class="container">
+       <div class="row">
+      <h1 class="center">Bushwick and the U.S. Census</h1>
+<p>A few weeks ago, Evagelos Frigis posted an <a href="http://bushwickdaily.com/2015/10/are-white-bodies-gentrifying-bushwick/">article</a> in the Bushwick Daily which used census data to support pro-gentrification, white supremacist viewpoints disguising as journalism. The article attempted to use "data" to suggest that gentrification in Bushwick isn't happening. The article was so offensive and riddled with errors the Bushwick Daily Editor had to <a href="http://bushwickdaily.com/2015/12/note-from-the-editor-apology-for-problematic-use-of-census-data-in-our-article/">post an apology</a>. What better way to give your false and dangerous opinions some creditably (and maybe get it published too) than whipping up some quick charts in excel and hope that one one notices...  </p>
       <p>Undoubtedly, numbers and maps have power. This is in part why I helped start the <a href="http://bushwickcommunitymap.org/"> Bushwick Community Map</a> -- to give anti-gentrification and housing advocates the same numerical & technical tools that real estate has.</p>
 
-      <p>Following this post, Anthony wrote a <a href="http://bushwickcommunitymap.org/blog/?p=116">fabulous response</a> that I encourage you to read. However, I imagine that some readers out there might have a lagging thought in back of your head: <em>but what about those numbers?</em></p>
+      <p>Following this post, Anthony wrote a <a href="http://bushwickcommunitymap.org/blog/?p=116">fabulous response</a> that I encourage you to read. However, I imagine that some readers out there might have a lagging thought gathering dust in the back of your head: <em>what about those numbers?</em></p>
 
-      <p>Part of me doesn't want to spend the effort to prove that 'gentrification exists' through data when one  could just walk down the street and talk to nearly anyone. It's obvious to anyone who'se spent more than 10 minutes in Bushwick over the past 5 or 10 years of the changes that's occurred. However, when done in a careful and honest way, there are useful patterns that can be drawn from the census that illuminate the drastic changes and the rapid gentrification of Bushwick.</p>
+      <p>Part of me doesn't want to spend the effort to prove that 'gentrification exists' through data when one  could just walk down the street and talk to nearly anyone. It's should be obvious to anyone who'se spent more than 10 minutes in Bushwick over the past 5 or 10 years of the changes that's occurred. The census's racial categories are <a href="http://nyti.ms/17Yemsp">wrought</a> with <a href="http://www.huffingtonpost.com/2013/01/09/census-race-change-for-hispanics-criticism_n_2439617.html">problems</a>. However, when done in a careful and honest way, there are useful patterns that can be drawn from the census that illuminate the drastic changes and the rapid gentrification of Bushwick.</p>
 
       <p>This is first in a series of blog posts that will examine the trends that the census actually shows in Bushwick and North Brooklyn.</p>
+      </row>
       
-      <h3> In 10 years, Bushwick's white population has tripled</h3>
+      <h4 class="center"> In 10 years, Bushwick's white population has tripled</h4>
 
-      <p>One critical problem with the Bushwick Daily article is it's reliance outdated data. It's true that it will be hard to track some aspects of neighborhood change due to the temporal nature  of the census. Nonetheless, certain demographics changes from 2000 to 2010 clearly show nascent gentrification trends that are widespread today.</p>
+      <p>One critical problem with the Bushwick Daily's article is it's reliance on outdated data. It's true that it will be hard to track some aspects of neighborhood change due to the temporal nature  of the census. Nonetheless, certain demographics changes from 2000 to 2010 clearly show nascent gentrification trends that are widespread today.</p>
 
-      <p>In 10 years, Bushwick's white population <b>triples</b>. In 2000 only 3% of Bushwick is White. By 2010, Bushwick has grown to 8.5% white.</p>
+      <p>In 10 years, Bushwick's white population <b>triples</b>. In 2000 only 3% of Bushwick is White. By 2010, Bushwick has grown to 8.5% white. Many parts of bushwick are over 15%.</p>
       <div id="white-pop-map">
       </div>
 
-      <p>These changes occurs largely in the north part of Bushwick, as if spilling over from Williamsburg.</p>
+      <p>These changes occur in the north part of Bushwick as if spilling over from Williamsburg.</p>
 
-      <p>It's true that the Hispanic population grew slightly from around 70,000 to around 73,500 - an increase of about 5% -- but that's way under what one might expect. In New York City the Hispanic/Latino population grew from 2.2 Million to 2.8 Million between 2000 and 2010, an increase of nearly 30%. Bushwick, instead of following that trend, showed only an increase of 5%. Why? The gentrification-induced raising rents of bushwick has prevented the growth of the Hispanic/Latino population. The housing that should have been rented to people of color have instead been taken over by newly transplanted Whites.</p>
+      <p>It's true that Bushwick's Hispanic/Latino population grew slightly from around 70,000 to around 73,500 - an increase of about 5% -- but that's way under what one might expect. In New York City the Hispanic/Latino population grew from 2.2 Million to 2.8 Million between 2000 and 2010, an increase of nearly 30%. Bushwick, instead of following that trend, showed only an increase of 5%. Why? The gentrification-induced raising rents of bushwick has prevented the growth of the Hispanic/Latino population. The housing that should have been rented to people of color have instead been taken over by newly transplanted Whites.</p>
 
+      
       <p>All the while, NYC's white population declined slightly in the last decade, from 2.8 Million in 2000 to 2.7 Million in 2010. Bushwick has defied that trend.</p>
 
       <p>So certainly, Bushwick needs affordable housing for the growing Hispanic/Latino population of New York, but why then does it seem that nearly all of new-buildinghousing is going to Whites who didn't live in bushwick before? All signs point to a housing and planning system that promotes gentrification. </p>
